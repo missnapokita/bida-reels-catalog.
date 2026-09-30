@@ -1,0 +1,24 @@
+name = "bida-reels-catalog"
+main = "src/index.mjs"
+compatibility_date = "2026-09-30"
+
+[vars]
+FIREBASE_PROJECT_ID = "bida-reels"
+FIREBASE_API_KEY = "AIzaSyAIm10nD044MrF5Z_xYv0Di5YTWpWei_4Y"
+ADMIN_UIDS = "REPLACE_WITH_YOUR_FIREBASE_UID"
+UPSTREAM_GATEWAY = "https://bida-reels-api.zencorpuz729.workers.dev"
+
+[[r2_buckets]]
+binding = "CATALOG"
+bucket_name = "bida-reels-catalog"
+
+[[durable_objects.bindings]]
+name = "COORDINATOR"
+class_name = "CatalogCoordinator"
+
+[[migrations]]
+tag = "v1"
+new_sqlite_classes = ["CatalogCoordinator"]
+
+[triggers]
+crons = ["0 */6 * * *"]
