@@ -5,7 +5,7 @@ compatibility_date = "2026-09-30"
 [vars]
 FIREBASE_PROJECT_ID = "bida-reels"
 FIREBASE_API_KEY = "AIzaSyAIm10nD044MrF5Z_xYv0Di5YTWpWei_4Y"
-ADMIN_UIDS = "REPLACE_WITH_YOUR_FIREBASE_UID"
+ADMIN_UIDS = "dcWWpm2lamMT0RUofgC6EFr1k822"
 UPSTREAM_GATEWAY = "https://bida-reels-api.zencorpuz729.workers.dev"
 
 [[r2_buckets]]
